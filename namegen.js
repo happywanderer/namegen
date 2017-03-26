@@ -85,9 +85,7 @@
                 } else {
                     sendChat('',`No location.  Available options are: <b>${_.keys(towns).join(', ')}</b>`);
                 } 
-            } else {
-                sendChat('',`<div>Usage: <br><code>!towngen [location] </code><br>Available location options are: <b>${_.keys(towns).join(', ')}</b>`);
-            }
+            } 
         }
         
         function taverngen(){
