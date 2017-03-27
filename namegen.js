@@ -58,6 +58,16 @@
     //
     var age = ["Young", "Middle-aged", "Old", "Ancient"];
     
+    var height = ["dwarf short", "short", "average height", "tall", "astoundingly tall"];
+    
+    var weight = ["skeletally thin", "thin", "average build", "muscular", "beefy", "corpulent", "rotund", "pudgy", "built like a brick outhouse"];
+    
+    var eyecolor = ["black", "brown", "green", "hazel", "blue", "grey", "amber", "azure"];
+    
+    var clothes = ["tattered clothing", "peasant's clothes", "sturdy traveling garb", "street clothes", "well-tailored clothing an an expensive cut", "a dark cloak with the hood up", "a poorly-crafted disguise", "a well-crafted disguise", "some sort of uniform with symbols embroidered on the sleeves", "grass-stained breeches and a sweaty tunic", "the latest fad in striped shirts", "obscenely colorful pants", "mismatched shirt and pants"];
+    
+    var items = ["a small backpack", "a bulging sack that clinks", "a bunch of documents in a binder", "an aged oak walking stick", "a rat perched on a shoulder", "a bird sitting on a shoulder", "a strange odors wafting every time they move", "a pet dog by their side", "a pet cat by their side", "a bottle of fine wine"]; 
+    
     var occupation = {
         government: ["Bailiff  ", "Catchpole  ", "Chancellor  ", "Constable  ", "Diplomat  ", "Emperor  ", "Exchequer  ", "Hayward  ", "Herald  ", "Jailer  ", "Judge  ", "King  ", "Knight", "Lady", "Liner  ", "Master", "Nobleman", "Prince", "Pursuivant  ", "Reeve  ", "Sherrif", "Summoner  ", "Watchman", "Woodward  "],
         military: ["Archer  ", "Bowman", "Camp Follower", "Cannoneer", "Crossbowman", "Drummer", "Engineer", "Guardsman", "Halberdier", "Knifeman  ", "Mercenary", "Pikeman", "Pioneer  ", "Sapper  ", "Scout", "Siege Engineer", "Sergeant", "Sergeant At Arms", "Spearman", "Spy"],
@@ -108,6 +118,9 @@
             taverngen();
         }
         
+        //
+        //Generate a random name based on language and gender (or completely random)
+        //
         function namegen(){
             if( '!namegen' === cmds.shift()){
                 if(cmds.length) {
@@ -126,6 +139,9 @@
             }
         }
         
+        //
+        //Generate a random town/city name based on geographic region or random
+        //
         function towngen(){
             if( '!towngen' === cmds.shift()){
                 if(cmds.length) {
@@ -139,11 +155,22 @@
             } 
         }
         
+        //
+        //Generate a random tavern name
+        //
         function taverngen(){
             if( '!taverngen' === cmds.shift()){
                 
                 sendChat('',`${BoxStyle} <b>Tavern Name is: ${_.sample(tavern)}</b></div>`);
             }
         }
+        
+        //
+        //Generate a random NPC - WORK IN PROGRESS
+        //
+        //function npcgen(){
+        //    if ( '!npcgen' === cmds.shift()){
+        //        
+        //    }
     });
 }());
